@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+</head>
+<style>
+    .solucion {
+        border: 1px solid black;
+        width: 60%;
+        background-color: rgb(211, 236, 236);
+        display: none;
+    }
+</style>
+<body>
+    <p> Confeccionar una programa en JavaScript que defina e inicialice una variable de tipo cadena de caracteres donde almacenemos el nombre de un empleado y otra variable de tipo entera donde almacenar el sueldo. Imprimir cada variable en una línea distinta en pantalla.</p>
+
+    <button onclick="mostrarSol()">Ver solucion</button>
+    <button onclick="ocultarSol()">Ocultar solucion</button>
+    
+    <pre class="solucion" id="sol">
+        var nombre = 'nombre';
+        var sueldo = 6000;
+
+        document.write('Nombre: ' + nombre);
+        document.write('Sueldo: ' + sueldo);
+    </pre>
+    <script>
+        function mostrarSol() {
+            document.getElementById("sol").style.display = "block";
+        }
+
+        function ocultarSol() {
+            document.getElementById("sol").style.display = "none";
+        }
+    </script>    
+</body>
+</html>

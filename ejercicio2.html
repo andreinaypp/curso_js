@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+</head>
+<style>
+    .solucion {
+        border: 1px solid black;
+        width: 60%;
+        background-color: rgb(211, 236, 236);
+        display: none;
+    }
+</style>
+<body>
+    <p>Confeccionar un programa que permita cargar el nombre de un usuario y su mail por teclado. Mostrar posteriormente los datos en la página HTML.</p>
+
+    <button onclick="datos()">Ejecutar script</button>
+    <button onclick="mostrarSol()">Ver solucion</button>
+    <button onclick="ocultarSol()">Ocultar solucion</button>
+    
+    <pre class="solucion" id="sol">
+        var nombre = (prompt('Ingrese su nombre'));
+        var email = prompt('Ingrese su email')
+
+        document.write('Nombre: ' + nombre)
+        document.write('Email: ' + email)
+    </pre>
+    <script>
+        function mostrarSol() {
+            document.getElementById("sol").style.display = "block";
+        }
+
+        function ocultarSol() {
+            document.getElementById("sol").style.display = "none";
+        }
+
+        function datos() {
+            var nombre = (prompt('Ingrese su nombre'));
+            var email = prompt('Ingrese su email')
+
+            document.write('Nombre: ' + nombre + '<br>')
+            document.write('Email: ' + email)
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+</head>
+<style>
+    .solucion {
+        border: 1px solid black;
+        width: 60%;
+        background-color: rgb(211, 236, 236);
+        display: none;
+    }
+</style>
+<body>
+    <p>1.-Se ingresan tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el mensaje 'Promocionado'. Tener en cuenta que para obtener el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3.</p><br>
+    <p>2.-Solicitar que se ingrese dos veces una clave. Mostrar un mensaje si son iguales (tener en cuenta que para ver si dos variables tienen el mismo valor almacenado debemos utilizar el operador ==)</p>
+
+    <button onclick="notas()">Ejecutar script 1</button>
+    <button onclick="compararClaves()">Ejecutar script 2</button>
+    <button onclick="mostrarSol()">Ver solucion</button>
+    <button onclick="ocultarSol()">Ocultar solucion</button>
+    
+    <pre class="solucion" id="sol">
+        function notas() {
+            var nota1 = parseInt(prompt('Ingrese la nota del alumno'));
+            var nota2 = parseInt(prompt('Ingrese la nota del alumno'));
+            var nota3 = parseInt(prompt('Ingrese la nota del alumno'));
+            var suma = (nota1 + nota2 + nota3);
+            var promedio = suma/3;
+
+            if (promedio>=7) {
+                var decision = 'promocionado';
+            } else {
+                var decision = 'reprobado';
+            } 
+            document.write('El alumno esta ' + decision);
+        }
+
+        function compararClaves(){
+            var clave1 = prompt('Ingrese su clave');
+            var clave2 = prompt('Ingrese de nuevo su clave');
+
+            if (clave1==clave2) {
+                var confirmar = 'son iguales'
+            } else {
+                var confirmar = 'son diferentes'
+            }
+            document.write('Las claves ingresadas ' + confirmar)
+        }
+    </pre>
+    <script>
+        function mostrarSol() {
+            document.getElementById("sol").style.display = "block";
+        }
+
+        function ocultarSol() {
+            document.getElementById("sol").style.display = "none";
+        }
+       
+        function notas() {
+            var nota1 = parseInt(prompt('Ingrese la nota del alumno'));
+            var nota2 = parseInt(prompt('Ingrese la nota del alumno'));
+            var nota3 = parseInt(prompt('Ingrese la nota del alumno'));
+            var suma = (nota1 + nota2 + nota3);
+            var promedio = suma/3;
+    
+            if (promedio>=7) {
+                var decision = 'promocionado';
+            } else {
+                var decision = 'reprobado';
+            } 
+            document.write('El alumno esta ' + decision);
+        }
+
+        function compararClaves(){
+            var clave1 = prompt('Ingrese su clave');
+            var clave2 = prompt('Ingrese de nuevo su clave');
+
+            if (clave1==clave2) {
+                var confirmar = 'son iguales'
+            } else {
+                var confirmar = 'son diferentes'
+            }
+            document.write('Las claves ingresadas ' + confirmar)
+        }
+
+    </script>    
+</body>
+</html>

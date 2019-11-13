@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 5</title>
+</head>
+<style>
+    .solucion {
+        border: 1px solid black;
+        width: 60%;
+        background-color: rgb(211, 236, 236);
+        display: none;
+    }
+</style>
+<body>
+    <p>1.-Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia, en caso contrario informar el producto y la división del primero respecto al segundo.</p><br>
+    <p>2.-Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', sino 'reprobado'.</p><br>
+    <p>3.-Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando si el número tiene uno o dos dígitos (recordar de convertir a entero con parseInt para preguntar posteriormente por una variable entera). Tener en cuenta qué condición debe cumplirse para tener dos dígitos un número entero.</p>
+
+    <button onclick="num()">Ejecutar script 1</button>
+    <button onclick="notas()">Ejecutar script 2</button>
+    <button onclick="digitos()">Ejecutar script 3</button>
+    <button onclick="mostrarSol()">Ver solucion</button>
+    <button onclick="ocultarSol()">Ocultar solucion</button>
+    
+    <pre class="solucion" id="sol">
+        function num() {
+            var num1 = parseInt(prompt('Ingrese un numero'));
+            var num2 = parseInt(prompt('Ingrese un numero'));
+
+            if (num1>num2) {
+                var suma = num1 + num2;
+                var diferencia = num1 - num2
+            } else {
+                var producto = num1 * num2;
+                var division = num1/num2;
+            } 
+            document.write('La suma es ' + suma);
+            document.write('La diferencia es ' + diferencia);
+            document.write('El producto es ' + producto);
+            document.write('La division es ' + division);
+        }
+
+        function notas(){
+            var nota1 = prompt('Ingrese la nota');
+            var nota2 = prompt('Ingrese la nota');
+            var nota3 = prompt('Ingrese la nota');
+            var promedio = (nota1 + nota2 + nota3)/3;
+
+            if (promedio>=4) {
+                var decision = 'regular';
+            } else {
+                var decision = 'reprobado';
+            }
+            document.write('El alumno esta ' + decision)
+        }
+        
+        function digitos(){
+            var num = parseInt(prompt('Ingrese un numero de uno o dos digitos'));
+
+            if (num>=9) {
+                var digito = 'dos digitos';
+            } else {
+                var digito = 'un digito';
+            }
+        document.write('El numero tiene ' + digito);
+        }
+                
+    </pre>
+    <script>
+        function mostrarSol() {
+            document.getElementById("sol").style.display = "block";
+        }
+
+        function ocultarSol() {
+            document.getElementById("sol").style.display = "none";
+        }
+       
+        function num() {
+            var num1 = parseInt(prompt('Ingrese un numero'));
+            var num2 = parseInt(prompt('Ingrese un numero'));
+    
+            if (num1>num2) {
+                var suma = num1 + num2;
+                var diferencia = num1 - num2
+            } else {
+                var producto = num1 * num2;
+                var division = num1/num2;
+            } 
+            document.write('La suma es ' + suma + '<br>');
+            document.write('La diferencia es ' + diferencia + '<br>');
+            document.write('El producto es ' + producto + '<br>');
+            document.write('La division es ' + division + '<br>');
+        }
+
+        function notas(){
+            var nota1 = prompt('Ingrese la nota');
+            var nota2 = prompt('Ingrese la nota');
+            var nota3 = prompt('Ingrese la nota');
+            var promedio = (nota1 + nota2 + nota3)/3;
+
+            if (promedio>=4){
+                var decision = 'regular';
+            } else {
+                var decision = 'reprobado';
+            }
+            document.write('El alumno esta ' + decision)
+        }
+
+        function digitos(){
+            var num = parseInt(prompt('Ingrese un numero de uno o dos digitos'));
+
+            if (num>9) {
+                var digito = 'dos digitos';
+            } else {
+                var digito = 'un digito';
+            }
+        document.write('El numero tiene ' + digito);
+        }
+    </script>    
+</body>
+</html>

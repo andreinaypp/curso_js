@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 6</title>
+</head>
+<style>
+    .solucion {
+        border: 1px solid black;
+        width: 60%;
+        background-color: rgb(211, 236, 236);
+        display: none;
+    }
+</style>
+<body>
+    <p>1.-Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia, en caso contrario informar el producto y la división del primero respecto al segundo.</p><br>
+    <p>2.-Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', sino 'reprobado'.</p><br>
+    <p>3.-Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando si el número tiene uno o dos dígitos (recordar de convertir a entero con parseInt para preguntar posteriormente por una variable entera). Tener en cuenta qué condición debe cumplirse para tener dos dígitos un número entero.</p>
+
+    <button onclick="numMayor()">Ejecutar script 1</button>
+    <button onclick="num()">Ejecutar script 2</button>
+    <button onclick="digitos()">Ejecutar script 3</button>
+    <button onclick="postulante()">Ejecutar script 4</button>
+    <button onclick="mostrarSol()">Ver solucion</button>
+    <button onclick="ocultarSol()">Ocultar solucion</button>
+    
+    <pre class="solucion" id="sol">
+            function numMayor() {
+                var num1 = parseInt(prompt('Ingrese un numero'));
+                var num2 = parseInt(prompt('Ingrese un numero'));
+                var num3 = parseInt(prompt('Ingrese un numero'));
+        
+                if (num1>num2 && num1>num3) {
+                    document.write('El mayor de los tres numeros es: ' + num1);
+                } else if (num2>num3) {
+                    document.write('El mayor de los tres numeros es: ' + num2);
+                } else {
+                    document.write('El mayor de los tres numeros es: ' + num3);
+                }
+            }
+    
+            function num(){
+                var num = parseInt(prompt('Ingrese un numero'));
+            
+                if (num==0){
+                    document.write('El numero ingresado es cero');
+                } else if (num>0) {
+                    document.write('El numero ingresado es positivo');
+                } else {
+                    document.write('El numero ingresado es negativo);
+                }
+            }
+    
+            function digitos(){
+                var num = parseInt(prompt('Ingrese un numero de uno o dos digitos'));
+    
+                if (num>99) {
+                    var digito = 'tres digitos';
+                } else if (num>10) {
+                    var digito = 'dos digitos';
+                } else {
+                    var digito = 'un digito';
+                }
+
+            function postulante() {
+                var nombre = prompt('Ingrese el nombre del postulante');
+                var pregRealizadas = prompt('Ingrese el numero de preguntas realizadas');
+                var pregCorrectas = prompt('Ingrese la cantidad de preguntas correctas');
+                var porcentaje = (pregCorrectas/pregRealizadas)*100;
+    
+                if (porcentaje>=90) {
+                    var decision = 'Nivel superior';
+                } else if (porcentaje>=75 && porcentaje<90) {
+                    var decision = 'Nivel medio';
+                } else if (porcentaje>=50 && porcentaje<75) {
+                    var decision = 'Nivel regular';
+                } else {
+                    var decision = 'Fuera de nivel';
+                }
+            }
+                
+    </pre>
+    <script>
+        function mostrarSol() {
+            document.getElementById("sol").style.display = "block";
+        }
+
+        function ocultarSol() {
+            document.getElementById("sol").style.display = "none";
+        }
+       
+        function numMayor() {
+            var num1 = parseInt(prompt('Ingrese un numero'));
+            var num2 = parseInt(prompt('Ingrese un numero'));
+            var num3 = parseInt(prompt('Ingrese un numero'));
+    
+            if (num1>num2 && num1>num3) {
+                document.write('El mayor de los tres numeros es: ' + num1);
+            } else if (num2>num3) {
+                document.write('El mayor de los tres numeros es: ' + num2);
+            } else {
+                document.write('El mayor de los tres numeros es: ' + num3);
+            }
+        }
+
+        function num(){
+            var num = parseInt(prompt('Ingrese un numero'));
+        
+            if (num==0){
+                document.write('El numero ingresado es cero');
+            } else if (num>0) {
+                document.write('El numero ingresado es positivo');
+            } else {
+                document.write('El numero ingresado es negativo');
+            }
+        }
+
+        function digitos(){
+            var num = parseInt(prompt('Ingrese un numero de uno o dos digitos'));
+
+            if (num>99) {
+                var digito = 'tres digitos';
+            } else if (num>10) {
+                var digito = 'dos digitos';
+            } else {
+                var digito = 'un digito';
+            }
+        document.write('El numero tiene ' + digito);
+        }
+
+        function postulante() {
+            var nombre = prompt('Ingrese el nombre del postulante');
+            var pregRealizadas = prompt('Ingrese el numero de preguntas realizadas');
+            var pregCorrectas = prompt('Ingrese la cantidad de preguntas correctas');
+            var porcentaje = (pregCorrectas/pregRealizadas)*100;
+
+            if (porcentaje>=90) {
+                var decision = 'Nivel superior';
+            } else if (porcentaje>=75 && porcentaje<90) {
+                var decision = 'Nivel medio';
+            } else if (porcentaje>=50 && porcentaje<75) {
+                var decision = 'Nivel regular';
+            } else {
+                var decision = 'Fuera de nivel';
+            }
+        }
+    </script>    
+</body>
+</html>
