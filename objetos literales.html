@@ -1,0 +1,28 @@
+<script>
+    var participante = {
+        nombre: 'Andreina',
+        puntos: 500,
+        imprimir: function () {
+            document.write(this.nombre + ' tiene inicialmente ' + this.puntos + '<br>');
+        },
+
+        aumentarPuntos: function (puntos) {
+            this.puntos = this.puntos + puntos;
+        },
+
+        verificarSigano: function () {
+            if (this.puntos>1000) {
+                document.write('Despues de un juego, los puntos superan los 1000');
+            } else {
+                document.write('Despues de un juego, los puntos no superan los 1000');
+            }
+        }
+    };
+
+    participante.imprimir();
+    participante.aumentarPuntos(200);
+    participante.verificarSigano();
+
+</script>    
+</body>
+</html>

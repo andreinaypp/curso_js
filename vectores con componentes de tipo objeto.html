@@ -1,0 +1,36 @@
+<script>
+
+    function Persona(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.imprimirDatos = imprimirDatos;
+    }
+
+    function imprimirDatos() {
+        document.write(this.nombre+' que tiene una edad de '+this.edad+ ' años' + '<br>')
+    }
+
+    var vector = new Array(4);
+    vector[0] = new Persona ('Andre', 31);
+    vector[1] = new Persona ('Tulasi', 1);
+    vector[2] = new Persona ('Andres', 13);
+    vector[3] = new Persona ('Kuai', 28);
+
+    var mayor = 0;
+    for (var i=0; i<vector.length; i++) {
+      if (vector[i].edad > vector[mayor].edad) {
+        mayor = i
+      }
+    }
+
+    document.write('Personas con mayor edad:<br>');
+
+    for (var i=0; i<vector.length; i++) {
+      if (vector[i].edad==vector[mayor].edad) {
+        vector[i].imprimirDatos();
+      }
+    }
+
+</script>    
+</body>
+</html>
