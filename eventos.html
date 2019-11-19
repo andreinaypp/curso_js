@@ -1,0 +1,104 @@
+<!-- Eventos definidos en el html -->
+<!-- <body>
+<form method="post" action="procesar.php" onsubmit="validar()">
+  Ingrese su nombre:
+  <input type="text" id="usuario" name="name" size="20"><br>
+  Ingrese su clave:
+  <input type="password" id="password" name="clave" size="20"><br>
+  <input type="submit" id="confirma" name="confirmar" value="confirmar">
+</form>
+<script>
+  function validar() {
+    var usuario = document.getElementById("usuario").value;
+    var password = document.getElementById("password").value;
+      if (usuario.length==0 || password.length==0)  {
+        alert('El nombre de usuario o contraseña esta vacio');
+        return false;
+      } else {
+         return true;
+      }
+  }
+  </script>
+</body> -->
+
+<!-- Eventos definidos accediendo a propiedades del objeto. -->
+<!-- <body>
+    <form method="post" action="procesar.php" id="formulario">
+      Ingrese su nombre:
+      <input type="text" id="usuario" name="name" size="20"><br>
+      Ingrese su clave:
+      <input type="password" id="password" name="clave" size="20"><br>
+      <input type="submit" id="confirma" name="confirmar" value="confirmar">
+    </form>
+    <script>
+      window.onload = inicio;
+
+      function inicio() {
+        document.getElementById("formulario").onsubmit=validar;
+      }
+      function validar() {
+        var usuario = document.getElementById("usuario").value;
+        var password = document.getElementById("password").value;
+          if (usuario.length==0 || password.length==0)  {
+            alert('El nombre de usuario o contraseña esta vacio');
+            return false;
+          } else {
+            return true;
+          }
+      }
+      </script>
+    </body> -->
+
+<!-- Codigo mas condensado -->
+
+<!-- <body>
+    <form method="post" action="procesar.php" id="formulario">
+      Ingrese su nombre:
+      <input type="text" id="usuario" name="name" size="20"><br>
+      Ingrese su clave:
+      <input type="password" id="password" name="clave" size="20"><br>
+      <input type="submit" id="confirma" name="confirmar" value="confirmar">
+    </form>
+    <script>
+      window.onload = function() {
+        document.getElementById("formulario").onsubmit=function() {
+          var usuario = document.getElementById("usuario").value;
+          var password = document.getElementById("password").value;
+            if (usuario.length==0 || password.length==0)  {
+              alert('El nombre de usuario o contraseña esta vacio');
+              return false;
+            } else {
+              return true;
+            }
+        }
+      }  
+      </script>
+    </body> -->
+
+<!-- Modelo de eventos definidos por W3C (World Wide Web Consortium) -->
+
+<body>
+  <form method="post" action="procesar.php" id="formulario">
+    Ingrese su nombre:
+    <input type="text" id="usuario" name="name" size="20"><br>
+    Ingrese su clave:
+    <input type="password" id="password" name="clave" size="20"><br>
+    <input type="submit" id="confirma" name="confirmar" value="confirmar">
+  </form>
+  <script>
+    window.addEventListener('load', inicio, false);
+
+    function inicio() {
+      document.getElementById("formulario").addEventListener('submit', validar, false);
+    }
+    
+    function validad(evt) {
+      var usuario = document.getElementById("usuario").value;
+      var password = document.getElementById("password").value;
+        if (usuario.length==0 || password.length==0)  {
+          alert('El nombre de usuario o contraseña esta vacio');
+          evt.preventDefault();
+        }
+    }
+  </script>
+</body>

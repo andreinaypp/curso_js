@@ -1,0 +1,33 @@
+<script>
+    var vec = [];
+
+    for (let i = 0; i < 10; i++) {
+        vec[i] = parseInt(Math.random()*1000);
+    }
+    
+    document.write('Vector: <br>');
+
+    for (let i = 0; i < vec.length; i++) {
+        document.write(vec[i] + ' ');
+    }
+
+    document.write('<br>');
+
+    var menor = vec[0];
+    var pos = 0;
+
+    for (let i = 1; i < vec.length; i++) {
+        if (vec[i]<menor) {
+            menor = vec[i];
+            pos = i;
+        }
+    }
+
+    document.write('Elemento menor del vector: ' + menor);
+    document.write('<br>');
+    var vec2 = vec.slice(pos);
+    document.write('Vector resultante: <br>');
+    for (let i = 0; i < vec2.length; i++) {
+        document.write(vec2[i] + ' ' );
+    }
+</script>

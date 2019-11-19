@@ -1,0 +1,20 @@
+<script>
+var vec = [];
+var valor;
+for (let i = 0; i < 4; i++) {
+   valor = prompt('Ingrese un valor');
+
+   if (valor<100) {
+       vec.unshift(valor);
+   } else {
+       vec.push(valor)
+   }
+}
+
+
+
+for (let i = 0; i < vec.length; i++) {
+    document.write(vec[i]+'<br>')
+}
+
+</script>

@@ -1,0 +1,22 @@
+<script>
+var vec = [];
+
+for (let i = 0; i < 5; i++) {
+   vec[i] = parseInt(1 + Math.random()* 1000);
+}
+
+for (let i = 0; i < vec.length; i++) {
+    document.write(vec[i]+ '<br>');
+}
+var_1 = vec.pop()
+var_2 = vec.pop()
+document.write('Los dos ultimos vectores son: ' + var_1 + ' y ' + var_2 + '<br>');
+var sumarUlt = var_1 + var_2;
+document.write('La suma de los dos ultimos es: ' +sumarUlt + '<br>');
+document.write('El tamano del vector es de: ' + vec.length + '<br>');
+document.write('Elementos restantes del vector: <br>')
+    for (let i = 0; i < vec.length; i++) {
+        document.write(vec[i] + '<br>')
+    }
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+var vec = [];
+
+for (let i = 0; i < 10; i++) {
+    var valor = parseInt(Math.random()*500);
+    vec.push(valor);
+}
+
+document.write('Vector antes: <br>');
+    for (let i = 0; i < 10; i++) {
+        document.write(vec[i]+ '<br>')
+    }
+
+    for (let i = 0; i < 10; i=i+2) {
+        delete vec[i]
+    }
+
+document.write('Vector despues de borrar las posiciones pares: <br>');
+    for (let i = 0; i < 10; i++) {
+        document.write(vec[i]+ '<br>')
+    }
+
+</script>

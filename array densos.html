@@ -1,0 +1,41 @@
+<script>
+var vec1 = [];
+
+for (let i = 0; i < 10; i++) {
+    vec1[i] = parseInt(1 + (Math.random()*500));
+}
+
+var vec2 = [];
+var vec3 = [];
+var cant1 = 0;
+var cant2 = 0;
+
+for (let i = 0; i < vec1.length; i++) {
+    if (vec1[i]<250) {
+        vec2[cant1] = vec1[i];
+        cant1++;        
+    } else {
+        vec3[cant2] = vec1[i];
+        cant2++;
+    }
+}
+
+document.write('Tamano del segundo vector: ' + vec2.length + '<br>');
+document.write('Tamano del tercer vector: ' + vec3.length + '<br>');
+document.write('Elementos del primer vector. <br>');
+    for (let i = 0; i < vec1.length; i++) {
+        document.write(vec1[i] + '-');
+    }
+
+document.write('<br>');
+document.write('Elementos del segundo vector <br>');
+    for (let i = 0; i < vec2.length; i++) {
+        document.write(vec2[i] + '-');
+    }
+
+document.write('<br>');
+document.write('Elementos del tercer vector <br>');
+    for (let i = 0; i < vec3.length; i++) {
+        document.write(vec3[i] + '-');
+    }
+</script>
